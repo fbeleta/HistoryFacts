@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f8f8f8;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+header .logo {
+    text-align: center;
+}
+
+header .logo img {
+    max-width: 150px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin: 10px 0 0 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* Styles for index.html */
+.articles-section {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.articles-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.articles-section .article {
+    display: inline-block;
+    width: 30%;
+    margin: 10px 1.5%;
+    vertical-align: top;
+}
+
+.articles-section .article img {
+    width: 100%;
+    height: auto;
+}
+
+.articles-section .article h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.articles-section .article p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Styles for article.html */
+article h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+article p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+article img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
