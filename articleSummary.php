@@ -6,21 +6,18 @@
     <title>Home Page</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-<?php include("header.php") ?>
-
-    <main class="articles-section">
-        <h2>Kategorija</h2>
+<main class="articles-section">
+        <h2>Élections Européennes 2019</h2>
         <?php
         include 'config.php'; // Include the database connection
-        $result = $conn->query("SELECT * FROM news where archive = 0 ORDER BY created_at");
+        $result = $conn->query("SELECT * FROM news WHERE archive = 0 ORDER BY created_at DESC LIMIT 3");
 
         if ($result->num_rows > 0):
             while ($news_item = $result->fetch_assoc()): ?>
                 <div class="article">
                     <?php if ($news_item['image']): ?>
                         <a href="article.php?id=<?php echo urlencode($news_item['id']); ?>">
-                            <img src="<?php echo htmlspecialchars($news_item['image']); ?>" alt="Article Image">
+                            <img src="./uploads/<?php echo htmlspecialchars($news_item['image']); ?>" alt="Article Image">
                         </a>
                     <?php endif; ?>
                     <h3>
@@ -35,6 +32,3 @@
             <p>No news articles found.</p>
         <?php endif; ?>
     </main>
-        <?php include("footer.php")?>
-</body>
-</html>
