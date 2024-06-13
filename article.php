@@ -38,20 +38,18 @@ $news_item = $result->fetch_assoc();
             <ul>
                 <li><a href="index.php">Home</a></li>
                 <li><a href="unos.php">Submit News</a></li>
-                <li><a href="#">Elections</a></li>
+                <li><a href="kategorija.php">Kategorija</a></li>
                 <li><a href="#">Les JT</a></li>
-                <li><a href="#">Administracija</a></li>
+                <li><a href="administracija.php">Administracija</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <article>
             <h1><?php echo htmlspecialchars($news_item['title']); ?></h1>
-            <p><strong>Category:</strong> <?php echo htmlspecialchars($news_item['category']); ?></p>
-            <p><strong>Display:</strong> <?php echo htmlspecialchars($news_item['display']); ?></p>
-            <?php if ($news_item['image']): ?>
-                <img src="<?php echo htmlspecialchars($news_item['image']); ?>" alt="Article Image">
-            <?php endif; ?>
+            <p><strong>Kategorija:</strong> <?php echo htmlspecialchars($news_item['category']); ?></p>
+            <p><strong>Autor:</strong> <?php echo htmlspecialchars($news_item['archive']); ?></p>
+            <img src="<?php echo htmlspecialchars($news_item['image']); ?>" alt="Article Image">
             <p><?php echo nl2br(htmlspecialchars($news_item['summary'])); ?></p>
             <p><?php echo nl2br(htmlspecialchars($news_item['content'])); ?></p>
         </article>
